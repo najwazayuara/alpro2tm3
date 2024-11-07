@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Gaya untuk judul */
+        h1 {
+            color: #4caf50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Gaya form */
+        form {
+            background-color: #f1f8e9;
+            border: 2px solid #81c784;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input[type="number"] {
+            color: #2e7d32;
+            font-size: 1.2em;
+            margin: 8px 0;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4caf50;
+        }
+
+        /* Tampilan hasil */
+        h2 {
+            color: #388e3c;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #2e7d32;
+            font-size: 1.2em;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* Tombol kembali */
+        .back-home {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #66bb6a;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate Fibonacci Sequence</h1>
+    <form method="POST">
+        <label>Masukkan Angka:</label>
+        <input type="number" name="number" required>
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if result %}
+        <h2>Hasil:</h2>
+        <p>{{ result | join(", ") }}</p>
+    {% endif %}
+
+    <a href="/" class="back-home">Kembali ke Home</a>
+</body>
+</html>

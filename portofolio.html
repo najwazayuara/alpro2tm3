@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <style>
+        /* Gaya Umum untuk Halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f0ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        h1 {
+            color: #6a1b9a;
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* Daftar Proyek */
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        li {
+            background-color: #d1c4e9;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Link Proyek */
+        a {
+            text-decoration: none;
+            color: #4a148c;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Tombol Kembali */
+        .back-home {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #8e24aa;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #6a1b9a;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            li {
+                font-size: 1em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Portofolio</h1>
+    <ul>
+        <li>
+            <a href="{{ url_for('static', filename='index.html') }}" target="_blank">Proyek 1: Ecommerce Pet Shop</a>
+        </li>
+        <li>
+            <a href="{{ url_for('static', filename='belajar3uts.html') }}" target="_blank">Proyek 2: Table Reader</a>
+        </li>
+        <li>
+            <a href="{{ url_for('static', filename='newlagi.html') }}" target="_blank">Proyek 3: Data Management System</a>
+        </li>
+    </ul>
+    <a href="/" class="back-home">Kembali ke Home</a>
+</body>
+</html>

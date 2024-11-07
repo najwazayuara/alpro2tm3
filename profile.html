@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Gaya untuk judul */
+        h1 {
+            color: #4a148c;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Bingkai foto */
+        .profile-photo {
+            border: 5px solid #4a148c;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        /* Gaya untuk gambar */
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Gaya deskripsi */
+        p {
+            font-size: 1.2em;
+            color: #555;
+            text-align: center;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        /* Tombol Kembali */
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8e24aa;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #6a1b9a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Foto Diri</h1>
+    <div class="profile-photo">
+        <img src="{{ url_for('static', filename='Najwa.jpg') }}" alt="Foto Diri">
+    </div>
+    <p>Ini adalah halaman khusus untuk menampilkan foto diri Saya. Terima kasih telah mengunjungi halaman ini!</p>
+    <a href="/" class="back-home">Kembali ke Home</a>
+</body>
+</html>

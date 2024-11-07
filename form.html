@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Gaya untuk judul */
+        h1 {
+            color: #1565c0;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Gaya form */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Gaya label */
+        label {
+            font-size: 1.1em;
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+
+        /* Gaya input */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #90caf9;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        /* Gaya tombol submit */
+        input[type="submit"] {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+
+        /* Gaya hasil */
+        h2 {
+            color: #0d47a1;
+            margin-top: 30px;
+            font-size: 1.8em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        li {
+            background-color: #bbdefb;
+            color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tombol kembali */
+        .back-home {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1976d2;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Submission</h1>
+    <form method="POST">
+        <label>Masukkan Data:</label>
+        <input type="text" name="data" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Hasil:</h2>
+    <ul>
+        {% for entry in data %}
+            <li>{{ entry }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" class="back-home">Kembali ke Home</a>
+</body>
+</html>

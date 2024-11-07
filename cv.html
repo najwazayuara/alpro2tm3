@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        /* Pengaturan dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Gaya untuk judul */
+        h1 {
+            color: #f9a825;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #f57f17;
+            font-size: 1.8em;
+            margin: 30px 0 10px;
+        }
+
+        /* Gaya teks CV */
+        p {
+            font-size: 1.2em;
+            color: #333;
+            max-width: 600px;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #f57f17;
+        }
+
+        /* Tampilan iframe untuk resume */
+        iframe {
+            border: 3px solid #f9a825;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Link download */
+        a {
+            color: #f9a825;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        /* Tombol kembali */
+        .back-home {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #f9a825;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #f57f17;
+        }
+    </style>
+</head>
+<body>
+    <h1>Curriculum Vitae</h1>
+    <p><strong>Nama:</strong> Najwa Mu'izza Zayuara</p>
+    <p><strong>Email:</strong> najwaxxx@gmail.com</p>
+    <p><strong>Telepon:</strong> 0812-3456-7890</p>
+    
+    <h2>Resume My CV</h2>
+    <iframe src="{{ url_for('static', filename='resume.pdf') }}" width="100%" height="600px">
+        Your browser does not support iframes.
+    </iframe>
+    <p><a href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">Unduh PDF</a></p>
+    
+    <a href="/" class="back-home">Kembali ke Home</a>
+</body>
+</html>

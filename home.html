@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Gaya umum untuk halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Header */
+        h1 {
+            color: #d63384;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: #ffb3d9;
+            border-radius: 8px;
+            padding: 15px 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #fff;
+            background-color: #d63384;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #c2185b;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            nav {
+                padding: 10px;
+            }
+            nav a {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Blog Pribadi Saya</h1>
+    <nav>
+        <a href="/cv">CV</a>
+        <a href="/portofolio">Portofolio</a>
+        <a href="/biodata">Biodata</a>
+        <a href="https://www.instagram.com/najwazayr_" target="_blank">Instagram</a>
+        <a href="/profile">Profile</a>
+        <a href="/fibonacci">Fibonacci</a>
+        <a href="/data">JSON View</a>
+        <a href="/form">Form Submission</a>
+    </nav>
+</body>
+</html>
